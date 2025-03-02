@@ -1,0 +1,36 @@
+.markets-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.markets-container h1 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.markets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .markets-container {
+    padding: 1rem;
+  }
+  
+  .markets-grid {
+    grid-template-columns: 1fr;
+  }
+}

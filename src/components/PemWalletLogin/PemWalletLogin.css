@@ -1,0 +1,64 @@
+.pem-wallet-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(44, 44, 44, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.pem-login-button {
+  background-color: #7950f2;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pem-login-button:hover {
+  background-color: #6741d9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(121, 80, 242, 0.2);
+}
+
+.pem-login-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.pem-login-error {
+  margin-top: 1rem;
+  color: var(--no-color);
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid var(--no-color);
+  padding: 0.75rem;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.pem-info {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.pem-info p {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.pem-info small {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}

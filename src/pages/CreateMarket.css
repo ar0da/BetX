@@ -1,0 +1,194 @@
+:root {
+  --dark-bg-primary: #121212;
+  --dark-bg-secondary: #1e1e1e;
+  --dark-text-primary: #e0e0e0;
+  --dark-text-secondary: #b0b0b0;
+  --dark-accent-primary: #bb86fc;
+  --dark-accent-secondary: #03dac6;
+  --dark-border-color: #333;
+}
+
+.create-market-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--dark-bg-primary);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: var(--dark-text-primary);
+}
+
+.create-market-container h1 {
+  text-align: center;
+  color: var(--dark-accent-primary);
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.create-market-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--dark-text-secondary);
+  font-size: 0.9rem;
+}
+
+.form-group textarea,
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 1px solid var(--dark-border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+  transition: border-color 0.3s ease;
+}
+
+.form-group textarea:focus,
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--dark-accent-primary);
+  box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.2);
+}
+
+.option-selector {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.option-btn {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid var(--dark-accent-primary);
+  background-color: transparent;
+  color: var(--dark-accent-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.option-btn.selected {
+  background-color: var(--dark-accent-primary);
+  color: var(--dark-bg-primary);
+}
+
+.option-btn:hover:not(:disabled) {
+  background-color: rgba(187, 134, 252, 0.1);
+}
+
+.option-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.create-bet-button {
+  background-color: var(--dark-accent-secondary);
+  color: var(--dark-bg-primary);
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.create-bet-button:hover:not(:disabled) {
+  background-color: #66fff8;
+  transform: translateY(-2px);
+}
+
+.create-bet-button:disabled {
+  background-color: #444;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.success-container {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid #4caf50;
+  color: #4caf50;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error-container {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid #f44336;
+  color: #f44336;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.wallet-warning {
+  background-color: rgba(255, 235, 59, 0.1);
+  border: 1px solid #ffeb3b;
+  color: #ffeb3b;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .create-market-container {
+    width: 95%;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .option-selector {
+    flex-direction: column;
+  }
+
+  .option-btn {
+    padding: 10px;
+  }
+}
+
+/* Dark mode scrollbar */
+body {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-accent-primary) var(--dark-bg-secondary);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--dark-bg-secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--dark-accent-primary);
+  border-radius: 20px;
+  border: 3px solid var(--dark-bg-secondary);
+}
+
+/* Additional dark mode global styles */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

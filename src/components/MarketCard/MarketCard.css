@@ -1,0 +1,108 @@
+.market-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.market-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.market-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.market-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat-item p:first-child {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.stat-item p:last-child {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.yes-price, .no-price {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.yes-price {
+  background-color: #e8f5e9;
+}
+
+.yes-price p {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.no-price {
+  background-color: #ffebee;
+}
+
+.no-price p {
+  color: #c62828;
+  font-weight: 600;
+}
+
+.market-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.end-date {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.market-status {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.market-status.open {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.market-status.closed {
+  background-color: #ffebee;
+  color: #c62828;
+}

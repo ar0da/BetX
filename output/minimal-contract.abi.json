@@ -1,0 +1,188 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.85.0",
+            "commitHash": "4d91de4e48198da2e33413efdcd9cd2cc0c46688",
+            "commitDate": "2025-02-17",
+            "channel": "Stable",
+            "short": "rustc 1.85.0 (4d91de4e4 2025-02-17)"
+        },
+        "contractCrate": {
+            "name": "minimal-contract",
+            "version": "0.0.0"
+        },
+        "framework": {
+            "name": "multiversx-sc",
+            "version": "0.56.1"
+        }
+    },
+    "docs": [
+        "An empty contract. To be used as a template when starting a new contract from scratch."
+    ],
+    "name": "BettingContract",
+    "constructor": {
+        "inputs": [],
+        "outputs": []
+    },
+    "upgradeConstructor": {
+        "inputs": [],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "create_bet",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "EGLD"
+            ],
+            "inputs": [
+                {
+                    "name": "description",
+                    "type": "bytes"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "u64"
+                }
+            ]
+        },
+        {
+            "name": "accept_bet",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "EGLD"
+            ],
+            "inputs": [
+                {
+                    "name": "bet_id",
+                    "type": "u64"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "cancel_bet",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "bet_id",
+                    "type": "u64"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "resolve_bet",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "bet_id",
+                    "type": "u64"
+                },
+                {
+                    "name": "result",
+                    "type": "bool"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "getOwner",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "Address"
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "identifier": "bet_created",
+            "inputs": [
+                {
+                    "name": "bet_id",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "creator",
+                    "type": "Address",
+                    "indexed": true
+                },
+                {
+                    "name": "description",
+                    "type": "bytes",
+                    "indexed": true
+                },
+                {
+                    "name": "stake",
+                    "type": "BigUint"
+                }
+            ]
+        },
+        {
+            "identifier": "bet_accepted",
+            "inputs": [
+                {
+                    "name": "bet_id",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "challenger",
+                    "type": "Address",
+                    "indexed": true
+                },
+                {
+                    "name": "stake",
+                    "type": "BigUint"
+                }
+            ]
+        },
+        {
+            "identifier": "bet_cancelled",
+            "inputs": [
+                {
+                    "name": "bet_id",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "creator",
+                    "type": "Address",
+                    "indexed": true
+                }
+            ]
+        },
+        {
+            "identifier": "bet_resolved",
+            "inputs": [
+                {
+                    "name": "bet_id",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "winner",
+                    "type": "Address",
+                    "indexed": true
+                },
+                {
+                    "name": "total_pool",
+                    "type": "BigUint",
+                    "indexed": true
+                },
+                {
+                    "name": "result",
+                    "type": "bool"
+                }
+            ]
+        }
+    ],
+    "esdtAttributes": [],
+    "hasCallback": false,
+    "types": {}
+}

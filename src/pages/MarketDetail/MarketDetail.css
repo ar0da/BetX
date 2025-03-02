@@ -1,0 +1,153 @@
+.market-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.market-header {
+  margin-bottom: 20px;
+}
+
+.market-header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.market-status {
+  font-size: 16px;
+}
+
+.status-open {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.status-matched {
+  color: #2196f3;
+  font-weight: bold;
+}
+
+.status-resolved {
+  color: #9e9e9e;
+  font-weight: bold;
+}
+
+.status-cancelled {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.market-details {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.action-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.action-section h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.action-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 10px;
+}
+
+.action-button.accept {
+  background-color: #4caf50;
+  color: white;
+}
+
+.action-button.accept:hover:not(:disabled) {
+  background-color: #3d8b40;
+}
+
+.action-button.cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.action-button.cancel:hover:not(:disabled) {
+  background-color: #c62828;
+}
+
+.action-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.resolve-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.action-button.resolve-creator {
+  background-color: #4a69bd;
+  color: white;
+}
+
+.action-button.resolve-creator:hover:not(:disabled) {
+  background-color: #3c5aa6;
+}
+
+.action-button.resolve-challenger {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+.action-button.resolve-challenger:hover:not(:disabled) {
+  background-color: #5649c0;
+}
+
+.resolve-note {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+.login-prompt {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.loading, .error-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.error-message {
+  color: #f44336;
+  background-color: #ffebee;
+  border-radius: 8px;
+}
