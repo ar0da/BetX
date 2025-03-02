@@ -78,9 +78,10 @@ BetX is a decentralized betting application built on the MultiversX blockchain, 
 5. Create a Pull Request
 
 ## License
-Made by Gtü Blockchain
-[Specify your license here]
+Made by Gtu Blockchain
+
 
 ## Contact
 Arda Ceylan
-[Your contact information]
+Salih Cengiz
+Melik Caymazoğlu
