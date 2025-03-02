@@ -1,12 +1,86 @@
-# React + Vite
+# BetX - MultiversX Blockchain Betting Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+BetX is a decentralized betting application built on the MultiversX blockchain, providing a secure and transparent betting experience using blockchain technology.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 🔒 PEM Wallet Integration
+- 🎲 Decentralized Betting Mechanism
+- 🌐 MultiversX Devnet Deployment
+- 🔐 Secure Client-Side Wallet Authentication
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Prerequisites
+
+- Node.js (v18+)
+- npm or yarn
+- Rust (for smart contract development)
+- MultiversX SDK
+- MultiversX `mxpy` CLI tool
+
+## Setup and Installation
+
+### Frontend Setup
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/ar0da/BetX.git
+   cd BetX
+   ```
+
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+
+3. Run development server
+   ```bash
+   npm run dev
+   ```
+
+### Smart Contract Development
+
+1. Build the contract
+   ```bash
+   cd minimal-contract
+   cargo build --release
+   mxpy contract build
+   ```
+
+2. Deploy to MultiversX Devnet
+   - Use `mxpy contract deploy` or
+   - Use devnet web wallet: https://devnet-wallet.multiversx.com
+
+### Configuration
+
+- Update `config.js` with your deployed contract address
+- Ensure PEM wallet is configured for devnet
+
+## Development Notes
+
+- Uses React + Vite for frontend
+- Rust-based smart contract
+- Client-side PEM wallet authentication
+- Devnet deployment for testing
+
+## Security
+
+- PEM files processed entirely client-side
+- No sensitive wallet information stored server-side
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+[Specify your license here]
+
+## Contact
+
+[Your contact information]
